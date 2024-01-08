@@ -3,7 +3,7 @@
     "borderColor": "#E0DEDE",
     "isVisibleDownload": false,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.24905525921dd6f5ff46d0dd843b9e12.svg",
-    "topRow": 17,
+    "topRow": 13,
     "isSortable": false,
     "onPageChange": "{{getApplications.run()}}",
     "type": "TABLE_WIDGET_V2",
@@ -17,7 +17,10 @@
         {"key": "primaryColumns.tycoon_id.computedValue"},
         {"key": "primaryColumns.tycoon_name.computedValue"},
         {"key": "primaryColumns.family_clan.computedValue"},
-        {"key": "primaryColumns.group_holding.computedValue"}
+        {"key": "primaryColumns.group_holding.computedValue"},
+        {"key": "primaryColumns.customColumn1.boxShadow"},
+        {"key": "primaryColumns.customColumn1.borderRadius"},
+        {"key": "primaryColumns.customColumn1.buttonColor"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
@@ -56,7 +59,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1704703076975,
+    "columnUpdatedAt": 1704705703041,
     "primaryColumnId": "tycoon_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 74,
@@ -66,12 +69,13 @@
         "tycoon_id",
         "tycoon_name",
         "family_clan",
-        "group_holding"
+        "group_holding",
+        "customColumn1"
     ],
-    "dynamicPropertyPathList": [],
+    "dynamicPropertyPathList": [{"key": "onRowSelected"}],
     "compactMode": "DEFAULT",
     "displayName": "Table",
-    "bottomRow": 86,
+    "bottomRow": 82,
     "columnWidthMap": {
         "family_clan": 201,
         "tycoon_id": 60,
@@ -87,7 +91,9 @@
     "parentColumnSpace": 19.8125,
     "dynamicTriggerPathList": [
         {"key": "onPageChange"},
-        {"key": "onPageSizeChange"}
+        {"key": "onPageSizeChange"},
+        {"key": "onRowSelected"},
+        {"key": "primaryColumns.customColumn1.onClick"}
     ],
     "borderWidth": "1",
     "primaryColumns": {
@@ -193,6 +199,47 @@
             "cellBackground": "transparent",
             "verticalAlignment": "CENTER"
         },
+        "customColumn1": {
+            "boxShadow": "{{tbl_tycoons.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+            "computedValue": "",
+            "onClick": "{{showModal('detailModal');}}",
+            "buttonColor": "{{tbl_tycoons.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+            "isEditable": false,
+            "notation": "standard",
+            "alias": "Detail",
+            "enableSort": true,
+            "isSaveVisible": true,
+            "id": "customColumn1",
+            "isDisabled": false,
+            "allowSameOptionsInNewRow": true,
+            "validation": {},
+            "isCellVisible": true,
+            "isDerived": true,
+            "textSize": "0.875rem",
+            "buttonStyle": "rgb(3, 179, 101)",
+            "allowCellWrapping": false,
+            "index": 4,
+            "isDiscardVisible": true,
+            "isVisible": true,
+            "label": "Detail",
+            "fontStyle": "",
+            "textColor": "#231f20",
+            "labelColor": "#FFFFFF",
+            "columnType": "button",
+            "thousandSeparator": true,
+            "horizontalAlignment": "LEFT",
+            "isCellEditable": false,
+            "borderRadius": "{{tbl_tycoons.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+            "decimals": 0,
+            "width": 150,
+            "enableFilter": true,
+            "sticky": "",
+            "originalId": "customColumn1",
+            "currencyCode": "USD",
+            "cellBackground": "transparent",
+            "customAlias": "",
+            "verticalAlignment": "CENTER"
+        },
         "tycoon_name": {
             "computedValue": "{{tbl_tycoons.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tycoon_name\"]))}}",
             "isEditable": false,
@@ -228,10 +275,11 @@
             "verticalAlignment": "CENTER"
         }
     },
+    "onRowSelected": "",
     "key": "liwpj3ddwg",
     "canFreezeColumn": true,
     "isDeprecated": false,
-    "rightColumn": 24,
+    "rightColumn": 62,
     "textSize": "0.875rem",
     "widgetId": "pq1y04s3ns",
     "enableServerSideFiltering": false,
