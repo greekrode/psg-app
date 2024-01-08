@@ -7,6 +7,10 @@
     {
       "id": "Page1",
       "isDefault": false
+    },
+    {
+      "id": "Page2",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -19,6 +23,9 @@
   },
   "color": "#F4FFDE",
   "icon": "snowy-weather",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,

@@ -6,6 +6,7 @@
     "bottomRow": 86,
     "parentRowSpace": 40,
     "type": "CONTAINER_WIDGET",
+    "topRowBeforeCollapse": 17,
     "parentColumnSpace": 74,
     "dynamicTriggerPathList": [],
     "leftColumn": 25,
@@ -40,6 +41,7 @@
     "dynamicHeight": "FIXED",
     "widgetId": "yedzcruxdu",
     "containerStyle": "card",
+    "bottomRowBeforeCollapse": 86,
     "isVisible": "{{tbl_tycoons.selectedRow?.tycoon_id?.toString().length>0}}",
     "version": 1,
     "parentId": "0",
@@ -69,9 +71,9 @@
         }
     }]},
     "isLoading": false,
-    "originalTopRow": 87,
+    "originalTopRow": 17,
     "borderRadius": "1.5rem",
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 158,
+    "originalBottomRow": 86,
     "minDynamicHeight": 4
 }
