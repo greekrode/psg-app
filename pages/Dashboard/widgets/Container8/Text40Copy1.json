@@ -31,7 +31,7 @@
     "isDeprecated": false,
     "rightColumn": 64,
     "textAlign": "CENTER",
-    "dynamicHeight": "AUTO_HEIGHT",
+    "dynamicHeight": "AUTO_HEIGHT_WITH_LIMITS",
     "widgetId": "wwwwcrba9i",
     "isVisible": true,
     "fontStyle": "BOLD",
@@ -42,8 +42,8 @@
     "isLoading": false,
     "originalTopRow": 1,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "maxDynamicHeight": 9000,
-    "originalBottomRow": 6,
+    "maxDynamicHeight": 8,
+    "originalBottomRow": 7,
     "fontSize": "1.25rem",
     "minDynamicHeight": 4
 }
