@@ -1,0 +1,1 @@
+SELECT * FROM public."investees" LIMIT 10;

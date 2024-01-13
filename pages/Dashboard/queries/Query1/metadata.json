@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Insert_public_tycoons1",
+    "name": "Query1",
     "datasource": {
       "name": "PSG",
       "pluginId": "postgres-plugin",
@@ -13,38 +13,29 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page2",
+    "pageId": "Dashboard",
     "actionConfiguration": {
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO public.tycoons (\"tycoon_name\",\"family_clan\",\"group_holding\") VALUES ('{{(JSONForm1.formData || {}).tycoon_name}}','{{(JSONForm1.formData || {}).family_clan}}','{{(JSONForm1.formData || {}).group_holding}}')",
+      "body": "SELECT * FROM public.\"investees\" LIMIT 10;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "(JSONForm1.formData || {}).family_clan",
-      "(JSONForm1.formData || {}).group_holding",
-      "(JSONForm1.formData || {}).tycoon_name"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page2_Insert_public_tycoons1",
+  "id": "Dashboard_Query1",
   "deleted": false,
-  "gitSyncId": "659ba722f9c29059ca29539f_659bc24af9c29059ca295412"
+  "gitSyncId": "659ba722f9c29059ca29539f_65a00bacf9c29059ca295574"
 }

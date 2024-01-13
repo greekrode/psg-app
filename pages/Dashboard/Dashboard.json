@@ -29,6 +29,28 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Dashboard_Utils.filterTycoonsByType",
+              "name": "Utils.filterTycoonsByType",
+              "collectionId": "Dashboard_Utils",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async (dataSet, value) => {\n  const filteredList = dataSet.filter(item => item.entity_name.toLowerCase().includes(value.toLowerCase()));\n  const uniqueTycoonIds = [...new Set(filteredList.map(item => item.tycoon_id))];\n  return uniqueTycoonIds;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Dashboard_Utils.filterTypes",
+              "name": "Utils.filterTypes",
+              "collectionId": "Dashboard_Utils",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  return {\n    type: [{\n      name: \"Majority Ownership\",\n      code: \"mo\"\n    }, {\n      name: \"Previous Ownership\",\n      code: \"po\"\n    }, {\n      name: \"Securities\",\n      code: \"s\"\n    }, {\n      name: \"Investee\",\n      code: \"i\"\n    }]\n  };\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Dashboard_getTycoons",
               "name": "getTycoons",
               "confirmBeforeExecute": false,
@@ -68,6 +90,19 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Dashboard_Utils.filteredData",
+              "name": "Utils.filteredData",
+              "collectionId": "Dashboard_Utils",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  const majorityOwn = await getMajorityOwn.run();\n  const prevOwn = await getPrevOwn.run();\n  const securities = await getSecurities.run();\n  const investee = await getInvestees.run();\n  const tycoons = await getTycoons.run();\n  const value = filterInput.text;\n  const type = filterType.selectedOptionValue;\n  let uniqueTycoonIds;\n  switch (type) {\n    case \"mo\":\n      uniqueTycoonIds = await Utils.filterTycoonsByType(majorityOwn, value);\n      break;\n    case \"po\":\n      uniqueTycoonIds = await Utils.filterTycoonsByType(prevOwn, value);\n      break;\n    case \"s\":\n      uniqueTycoonIds = await Utils.filterTycoonsByType(securities, value);\n      break;\n    case \"i\":\n      uniqueTycoonIds = await Utils.filterTycoonsByType(investee, value);\n      break;\n    default:\n      return tycoons;\n  }\n  return tycoons.filter(tycoon => uniqueTycoonIds.includes(tycoon.tycoon_id));\n}"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

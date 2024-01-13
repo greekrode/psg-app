@@ -1,1 +1,0 @@
-INSERT INTO public.tycoons ("tycoon_name","family_clan","group_holding") VALUES ('{{(JSONForm1.formData || {}).tycoon_name}}','{{(JSONForm1.formData || {}).family_clan}}','{{(JSONForm1.formData || {}).group_holding}}')
