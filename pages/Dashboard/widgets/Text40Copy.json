@@ -7,8 +7,8 @@
         "paragraph",
         "label"
     ],
-    "topRow": 29,
-    "bottomRow": 33,
+    "topRow": 25,
+    "bottomRow": 29,
     "parentRowSpace": 10,
     "type": "TEXT_WIDGET",
     "hideCard": false,
@@ -28,7 +28,7 @@
     "text": "Tycoons",
     "key": "lpp3worjsh",
     "isDeprecated": false,
-    "rightColumn": 62,
+    "rightColumn": 64,
     "textAlign": "CENTER",
     "dynamicHeight": "FIXED",
     "widgetId": "b8bg8mt9hs",
@@ -39,10 +39,10 @@
     "parentId": "0",
     "renderMode": "CANVAS",
     "isLoading": false,
-    "originalTopRow": 29,
+    "originalTopRow": 25,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 33,
+    "originalBottomRow": 29,
     "fontSize": "1.25rem",
     "minDynamicHeight": 4
 }
