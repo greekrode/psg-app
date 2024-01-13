@@ -60,7 +60,7 @@
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "columnUpdatedAt": 1704706055574,
-    "originalBottomRow": 93,
+    "originalBottomRow": 88,
     "primaryColumnId": "tycoon_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 74,
@@ -79,7 +79,7 @@
     ],
     "compactMode": "DEFAULT",
     "displayName": "Table",
-    "bottomRow": 93,
+    "bottomRow": 88,
     "columnWidthMap": {
         "family_clan": 201,
         "tycoon_id": 60,

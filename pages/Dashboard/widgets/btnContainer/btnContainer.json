@@ -56,7 +56,7 @@
     "key": "2kgjt364fa",
     "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
     "isDeprecated": false,
-    "rightColumn": 61,
+    "rightColumn": 63,
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "a1sl8f2c7l",
     "containerStyle": "card",
