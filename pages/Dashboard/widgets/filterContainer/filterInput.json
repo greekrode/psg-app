@@ -50,7 +50,7 @@
     "rightColumn": 30.608695652173914,
     "widgetId": "td8aux9vts",
     "minWidth": 450,
-    "label": "Filter Value",
+    "label": "Value",
     "parentId": "622zewwr7o",
     "labelAlignment": "left",
     "renderMode": "CANVAS",

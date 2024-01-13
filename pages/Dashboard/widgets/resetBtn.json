@@ -2,7 +2,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 15,
     "widgetName": "resetBtn",
-    "onClick": "{{ resetWidget('filterContainer') }}",
+    "onClick": "{{ resetWidget('filterContainer', true)\nUtils.filteredData.call()\n}}",
     "buttonColor": "#b91c1c",
     "dynamicPropertyPathList": [{"key": "onClick"}],
     "displayName": "Icon button",
