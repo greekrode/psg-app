@@ -1,15 +1,11 @@
 {
+  "gitSyncId": "659ba722f9c29059ca29539f_659baaedf9c29059ca2953be",
+  "id": "Dashboard_Utils",
   "unpublishedCollection": {
     "name": "Utils",
     "pageId": "Dashboard",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
-    "variables": [],
-    "userPermissions": []
-  },
-  "id": "Dashboard_Utils",
-  "deleted": false,
-  "gitSyncId": "659ba722f9c29059ca29539f_659baaedf9c29059ca2953be"
+    "variables": []
+  }
 }
